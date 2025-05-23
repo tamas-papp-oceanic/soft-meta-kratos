@@ -1,0 +1,7 @@
+[Unit]
+Description=CPU performance
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c "echo performance > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor"
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,10 @@
+[Unit]
+Description=Product-Seed service
+Before=kratos.service
+ConditionPathExists=!/home/product.json
+
+[Service]
+ExecStart=/usr/lib/kratos/product-seed.sh
+
+[Install]
+WantedBy=multi-user.target

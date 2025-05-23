@@ -1,0 +1,11 @@
+[Unit]
+Description=Set up CAN on boot
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/ip link set can0 up type can bitrate 250000 restart-ms 100
+RemainAfterExit=true
+StandardOutput=journal
+
+[Install]
+WantedBy=multi-user.target

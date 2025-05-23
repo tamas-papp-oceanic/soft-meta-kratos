@@ -1,0 +1,13 @@
+[Unit]
+Description=Browser service
+After=kratos.service weston.service
+
+[Service]
+Environment=XDG_RUNTIME_DIR=/run/user/1000
+Environment=WAYLAND_DISPLAY=wayland-1
+ExecStart=/usr/bin/chromium --app=http://127.0.0.1/ --js-flags="--nodecommit_pooled_pages" --no-sandbox --kiosk --force-dark-mode --incognito --oobe-skip-to-login --touch-events=enabled --disable-pinch --overscroll-history-navigation=0 --disable-features="TouchpadOverscrollHistoryNavigation"
+Restart=always
+RestartSec=1
+
+[Install]
+WantedBy=multi-user.target

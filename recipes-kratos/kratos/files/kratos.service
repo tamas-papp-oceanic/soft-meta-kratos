@@ -1,0 +1,9 @@
+[Unit]
+Description=Kratos service
+After=can.service
+
+[Service]
+ExecStart=/usr/lib/kratos/kratos run
+
+[Install]
+WantedBy=multi-user.target
