@@ -2,13 +2,10 @@ DESCRIPTION = "Kratos go appplicaton"
 LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
 
-#GO_APP = "kratos"
 GO_APP = "soft-poseidon-kratos"
-#GO_IMPORT = "git/poseidon/${GO_APP}"
 GO_IMPORT = "github.com/tamas-papp-oceanic/${GO_APP}"
 GO_INSTALL = "${GO_IMPORT}"
 
-#SRC_URI = "git://git@${GO_IMPORT}.git;protocol=ssh;branch=master"
 SRC_URI = "git://git@${GO_IMPORT}.git;protocol=ssh;branch=main"
 SRCREV = "${AUTOREV}"
 
